@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VR Museum Tour</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        .explore{
+            position:absolute;
+            font-size:60px;
+            background:red;
+            top:100px;
+            rotate:360deg;
+            margin-top:270px;
+            margin-right:100px;
+            opacity:29%;
+           padding:50px;
+           
+        }
+        span{
+            background-color:red;
+            border:5px solid;
+        }
+        span1{
+            background-color:brown;
+            border:5px solid;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        #vr-scene {
+            margin: auto;
+            max-width: 800px;
+            height: 500px;
+            border-radius: 10px;
+            overflow:flex;
+            
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><span1>VR.</span1><span>Museum Tour</span></h1>
+    </header>
+    <main id="main-content">
+        <div id="vr-scene">
+            <img src="vr.jpg" width="100%" position="center" size="cover" >
+            <a-scene>
+                <!-- Camera -->
+                <a-entity camera look-controls wasd-controls></a-entity>
+                <!-- Sky with background images -->
+               
+
+                <!-- Exhibits -->
+                <a-entity id="exhibitsContainer">
+                    <h1 class="explore">Explore The World</h1>
+                </a-entity>
+            </a-scene>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 VR Museum. All rights reserved.</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
